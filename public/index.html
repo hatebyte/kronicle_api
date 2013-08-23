@@ -7,44 +7,44 @@
 <body>
 	<script src="js/lib/jquery.min.js"></script>
 	<script>
-    function response(data, textStatus, jqXHR ) {
-      console.log( '\nGet response:' );
-      console.dir( data );
-    }
+  //   function response(data, textStatus, jqXHR ) {
+  //     console.log( '\nGet response:' );
+  //     console.dir( data );
+  //   }
 
-		jQuery.post('http://166.78.151.97:4711/kronicles/', {
-    "title": "TOO BARF!!!",
-    "description": "This iswhaaaa o!",
-    "category": "food",
-    "imageUrl": "burger-media-6.png",
-    "items" : ["item 1", "item 2"],
-    "steps": [
-      {
-        "title": "Prep your ingredients",
-        "description": "Divide the meat into 4 equal portions (about 6 ounces each). \n\nForm each portion loosely into a 3/4-inch-thick burger and make a deep depression in the center with your thumb. \n\nSeason both sides of each burger with salt and pepper.\n\nBrush the burgers with the oil. ",
-        "imageUrl": "burger-media-1.png",
-        "dialImageUrl": "burger-circle-1.png",
-        "time": 300,
-        "indexInKronicle": 0,
-      },
-      {
-        "title": "Step 2: Warm the grill",
-        "description": "Heat the grill to high heat.",
-        "imageUrl": "burger-media-2.png",
-        "dialImageUrl": "burger-circle-2.png",
-        "time": 60,
-        "indexInKronicle": 1,
-      },
-      {
-        "title": "Step 3: Burger on flame",
-        "description": "Cook the burgers until golden brown and slightly charred on the first side. Don't press the with the spatula!",
-        "imageUrl": "burger-media-3.png",
-        "dialImageUrl": "burger-circle-3.png",
-        "time": 180,
-        "indexInKronicle": 2,
-      },
-    ]
-  }, response);
+		// jQuery.post('http://166.78.151.97:4711/kronicles/', {
+  //   "title": "TOO BARF!!!",
+  //   "description": "This iswhaaaa o!",
+  //   "category": "food",
+  //   "imageUrl": "burger-media-6.png",
+  //   "items" : ["item 1", "item 2"],
+  //   "steps": [
+  //     {
+  //       "title": "Prep your ingredients",
+  //       "description": "Divide the meat into 4 equal portions (about 6 ounces each). \n\nForm each portion loosely into a 3/4-inch-thick burger and make a deep depression in the center with your thumb. \n\nSeason both sides of each burger with salt and pepper.\n\nBrush the burgers with the oil. ",
+  //       "imageUrl": "burger-media-1.png",
+  //       "dialImageUrl": "burger-circle-1.png",
+  //       "time": 300,
+  //       "indexInKronicle": 0,
+  //     },
+  //     {
+  //       "title": "Step 2: Warm the grill",
+  //       "description": "Heat the grill to high heat.",
+  //       "imageUrl": "burger-media-2.png",
+  //       "dialImageUrl": "burger-circle-2.png",
+  //       "time": 60,
+  //       "indexInKronicle": 1,
+  //     },
+  //     {
+  //       "title": "Step 3: Burger on flame",
+  //       "description": "Cook the burgers until golden brown and slightly charred on the first side. Don't press the with the spatula!",
+  //       "imageUrl": "burger-media-3.png",
+  //       "dialImageUrl": "burger-circle-3.png",
+  //       "time": 180,
+  //       "indexInKronicle": 2,
+  //     },
+  //   ]
+  // }, response);
 	
 	// jQuery.ajax({
 	// 	url:'http://166.78.151.97:4711/kronicles',
@@ -73,7 +73,7 @@
 
 
 
-    // jQuery.get( 'http://166.78.151.97:4711/kronicles', response);
+     jQuery.get( 'http://166.78.151.97:4711/kronicles', response);
     // jQuery.get( 'http://166.78.151.97:4711/kronicles/ /steps', response);
     // jQuery.get( '/kronicles/521213b5b9676d8860000002', response);
     // jQuery.get( '/kronicles/521213b5b9676d8860000002', response);
