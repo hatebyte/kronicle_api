@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Kronicle Upload</title>
+	<script src="js/lib/jquery.min.js"></script>
+	<script src="js/init.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="css/styles.css"> 
+</head>
+<body>
+	<div class="header-wrapper">
+		<div class="cover-photo">
+			<img src="images/cover-photo.jpg" alt="profile cover image" />
+		</div>
+		<header id="site-header">
+			<a id="header-logo" href="#">Kronicle</a>
+			<nav class="site-utility">
+				<ul>
+					<li><a href="#" class="profile"><img src="images/profile-small.png" alt="my profile photo" />Me</a></li>
+					<li><a href="make.html">Create</a></li>
+					<li><a href="#" class="site-search">Search</a></li>
+				</ul>
+			</nav>
+		</header>
+		<div class="profile-details">
+			<img class="profile-large" src="images/profile-large.jpg" alt="profile large" />
+			<h1>Julia Smith</h1>
+			<h2><strong>89</strong> Subscribers</h2>
+			<h3>Aspiring Yogi, looking to spread the love about the mind and body</h3>
+		</div>
+	</div>
+	<div class="content">
+		<div class="wrapper">
+			<!-- <h1>Drop the Knowledge&hellip;</h1> -->
+			<form id="make-kronicle" action="">
+				<div class="wrap-left">
+					<h3>Define your Kronicle</h3>
+					<div class="mk-gen">
+						<label for="title">title</label>
+						<input type="text" name="title" id="mk-title" required="required" autofocus>
+						<label for="description">description</label>
+						<textarea name="description" id="mk-description" rows="6"></textarea>
+						<label for="category">category</label>
+						<select name="category" id="mk-category" required="required">
+							<option selcted="selected">choose an option&hellip;</option>
+							<option value="food">food</option>
+							<option value="exercise">exercise</option>
+							<option value="music">music</option>
+							<option value="art">art</option>
+							<option value="productivity">productivity</option>
+						</select>
+						<label for="imageUrl">Image URL</label>
+						<input type="text" name="imageUrl" id="mk-image" required="required">
+						<label for="totalTime">Total Time</label>
+						<input type="number" name="totalTime" id="mk-time" required="required">
+						<input type="hidden" name="timesCompleted" value="0" value="sdasdvsdvs">
+						<a href="#" class="btn btn-progress">Let&rsquo;s Get Started&hellip;</a>
+					</div><!-- .mk-gen -->
+				</div>
+				<div class="mk-steps">
+					<fieldset id="step-1" class="step" data-stepindex="1">
+						<legend id="legend-1">Step 1</legend>
+						<div class="mk-step">
+							<label class="ms-title-label" for="ms-title-1">title</label>
+							<input type="text" id="ms-title-1" class="ms-title" required="required">
+							
+							<label class="ms-description-label" for="ms-description-1">description</label>
+							<textarea id="ms-description-1" name="ms-description" class="ms-description" rows="4"></textarea>
+
+							<label class="ms-imageUrl-label" for="ms-imageUrl">Image URL</label>
+							<input type="text" id="ms-imageUrl-1" name="ms-imageUrl" class="ms-imageUrl" required="required">
+							
+							<label class="ms-dialImageUrl-label" for="ms-dialImageUrl">Dial Image URL</label>
+							<input type="text" id="ms-dialImageUrl-1" name="ms-dialImageUrl" class="ms-dialImageUrl" required="required">
+							
+							<label class="ms-time-label" for="ms-time">Step Time</label>
+							<input type="number" id="ms-time-1" name="ms-time" class="ms-time" required="required">
+
+							<input class="ms-indexInKronicle" type="hidden" id="ms-indexInKronicle-1" name="indexInKronicle" value="0">
+							<a href="#" class="btn btn-del" id="del-1"><strong>&ndash;</strong>&nbsp;&nbsp;Remove this step</a>
+						</div>
+					</fieldset>
+				</div><!-- .mk-steps -->
+				<div class="box-cta">
+					<a href="#" class="btn btn-progress" id="btn-add"><strong>+</strong>&nbsp;&nbsp;add another step</a>
+				</div>
+				<div class="finish">
+					<input type="submit" class="btn btn-gen" value="Save &amp; Preview">
+				</div>
+			</form>
+		</div><!-- .wrapper -->
+	</div><!-- .content -->
+	<script type="text/javascript">
+		function showValues() {
+			var kronicle = {
+				title 			: $('.mk-gen input[name="title"]').val(),
+				description 	: $('.mk-gen textarea[name="description"]').val(),
+				category 		: $('.mk-gen select[name="category"]').val(),
+				imageUrl 		: $('.mk-gen input[name="imageUrl"]').val(),
+				totalTime 		: $('.mk-gen input[name="totalTime"]').val(),
+				timesCompleted 	: $('.mk-gen input[name="timesCompleted"]').val(),
+				steps 			: []
+			};
+
+			console.log(kronicle);
+
+			var stepForms = $('.mk-step');
+			stepForms.each(function(index, value) {
+				var step = buildStep ( $(value) );
+				step.indexInKronicle = index;
+				kronicle.steps.push( step );
+			});
+
+			jQuery.post('/kronicles', kronicle, response );
+
+			// console.dir(kronicle.steps);
+
+
+			// var kFields =$(".mk-gen :input");
+			// kFields.each(function(i) {
+			// 	var stepObj = $("#step-"+i);
+			// 	console.log(stepObj);
+			// });
+			// var fields = $(":input").serializeArray();
+			// jQuery.each(fields, function(i, field){
+			// 	console.log('name: '+field.name+' || value:'+field.value);
+			// });
+		}
+		function buildStep(fieldData) {
+			var step = {}
+			var inputs = fieldData.children(":input");
+			for (var i = 0; i < 5; i++) {
+				var badname = $(inputs[i]).attr('class')
+				// console.dir($(inputs[i]).attr('class'));
+				step[badname.replace('ms-', '')] = $(inputs[i]).val();
+			}
+			console.dir(step);
+			return step;
+		}
+		$('input[type="submit"]').click(function(){
+			showValues();
+			return false;
+		});
+
+		// jQuery.ajax({
+		// 	url:'/kronicles/51ab20e70885c5158a000002',
+		// 	type : 'DELETE',
+		// 	success : response
+		// });
+
+		 jQuery.get( '/kronicles', response);
+		// jQuery.get( '/kronicles/51aa4be4b0388fbf5a000002/step/51aa4be4b0388fbf5a000005', response);
+		// jQuery.get( '/kronicles/step/51aa4be4b0388fbf5a000004', response);
+		function response(data, textStatus, jqXHR ) {
+			console.log( '\nGet response:' );
+			console.dir( data );
+		}
+
+	</script>
+</body>
+</html>

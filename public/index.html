@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Kronicle Test</title>
+</head>
+<body>
+	<script src="js/lib/jquery.min.js"></script>
+	<script>
+		jQuery.post('http://166.78.151.97:4711/kronicles', {
+    "title": "TOO BARF!!!",
+    "description": "This is my fool proof way to grill the perfect all american cheeseburger. All you need is some meat and a grill and you are good to go!",
+    "category": "food",
+    "imageUrl": "burger-media-6.png",
+    "items" : ["item 1", "item 2", "item 3"],
+    "steps": [
+      {
+        "title": "Prep your ingredients",
+        "description": "Divide the meat into 4 equal portions (about 6 ounces each). \n\nForm each portion loosely into a 3/4-inch-thick burger and make a deep depression in the center with your thumb. \n\nSeason both sides of each burger with salt and pepper.\n\nBrush the burgers with the oil. ",
+        "imageUrl": "burger-media-1.png",
+        "dialImageUrl": "burger-circle-1.png",
+        "time": 300,
+        "indexInKronicle": 0,
+      },
+      {
+        "title": "Step 2: Warm the grill",
+        "description": "Heat the grill to high heat.",
+        "imageUrl": "burger-media-2.png",
+        "dialImageUrl": "burger-circle-2.png",
+        "time": 60,
+        "indexInKronicle": 1,
+      },
+      {
+        "title": "Step 3: Burger on flame",
+        "description": "Cook the burgers until golden brown and slightly charred on the first side. Don't press the with the spatula!",
+        "imageUrl": "burger-media-3.png",
+        "dialImageUrl": "burger-circle-3.png",
+        "time": 180,
+        "indexInKronicle": 2,
+      },
+      {
+        "title": "Step 4: Flip and keep cooking",
+        "description": "Flip over the burgers. Just once.\nCook beef burgers until golden brown and slightly charred on the second side.",
+        "imageUrl": "burger-media-4.png",
+        "dialImageUrl": "burger-circle-4.png",
+        "time": 180,
+        "indexInKronicle": 3,
+      },
+      {
+        "title": "Step 5: Say cheese",
+        "description": "Add your favorite cheese.",
+        "imageUrl": "burger-media-5.png",
+        "dialImageUrl": "burger-circle-5.png",
+        "time": 60,
+        "indexInKronicle": 4,
+      }
+    ]
+  }, response );
+	
+	// jQuery.ajax({
+	// 	url:'http://166.78.151.97:4711/kronicles',
+	// 	type : 'DELETE',
+	// 	success : response
+	// });
+	
+	// jQuery.ajax({
+	// 	url:'/kronicles/521213b5b9676d8860000002/items',
+	// 	type : 'PUT',
+	// 	data : {
+ //      items : ["new item 1", "new item 2", "new items 3", " newitem 4"]
+	// 	},
+	// 	success : response
+	// });
+	
+	//	Burger Demo: 51aa4be4b0388fbf5a000002
+	//		step0: 51aa4be4b0388fbf5a000006
+	//		step1: 51aa4be4b0388fbf5a000005
+	//		step2: 51aa4be4b0388fbf5a000004
+	//		step3: 51aa4be4b0388fbf5a000003
+		
+
+	//jQuery.ajax({url:'/kronicles', type : 'DELETE', success : response });
+	//jQuery.ajax({url:'/kronicles/51b4f11830c80fab39000001/steps', type : 'DELETE', success : response });
+
+
+
+    jQuery.get( '/kronicles', response);
+    // jQuery.get( 'http://166.78.151.97:4711/kronicles', response);
+    // jQuery.get( '/kronicles/521213b5b9676d8860000002', response);
+    // jQuery.get( '/kronicles/521213b5b9676d8860000002', response);
+    // jQuery.get( '/kronicles/521213b5b9676d8860000002/items', response);
+		// jQuery.get( '/kronicles/steps', response);
+		// jQuery.get( '/kronicles/steps/51b4e1dd111d9b9f37000002', response);
+		// jQuery.get( '/kronicles/51b1ca94eb3fc80000000002/steps/51ab3445da51084c80000008', response);
+		
+		function response(data, textStatus, jqXHR ) {
+			console.log( '\nGet response:' );
+			console.dir( data );
+		}
+
+	</script>
+
+	Hello From Node
+	
+</body>
+</html>
