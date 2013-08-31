@@ -49,8 +49,7 @@ jQuery.post('http://166.78.151.97:4711/kronicles/', {
     },
     {
       "title": "6. Butter and Spice",
-      "description": "Now add the rest of the butter and the garlic. You can add salt and pepper if you want
-to season it a bit more. I add a dash of red pepper flakes to give it some bite!.",
+      "description": "Now add the rest of the butter and the garlic. You can add salt and pepper if you want to season it a bit more. I add a dash of red pepper flakes to give it some bite!.",
       "imageUrl": "brussel-sprouts-vid-part-6.mov",
       "time": 60,
       "indexInKronicle": 5,
