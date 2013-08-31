@@ -1,17 +1,3 @@
-<!doctype html>
-<html lang="en">
-<head>
-	<meta charset="utf-8">
-	<title>Kronicle Test</title>
-</head>
-<body>
-	<script src="js/lib/jquery.min.js"></script>
-	<script>
-    function response(data, textStatus, jqXHR ) {
-      console.log( '\nGet response:' );
-      console.dir( data );
-    }
-
 jQuery.post('http://166.78.151.97:4711/kronicles/', {
   "title": "Easy Brussels Sprouts",
   "description": "Peel the garlic by hitting the palm of your hand on a flat side of a chefs knife. Then chop up the garlic. Don't dice them to small or they will burn.",
@@ -84,31 +70,4 @@ to season it a bit more. I add a dash of red pepper flakes to give it some bite!
       "indexInKronicle": 7,
     }
   ]
-}, response);	
-	//	Burger Demo: 51aa4be4b0388fbf5a000002
-	//		step0: 51aa4be4b0388fbf5a000006
-	//		step1: 51aa4be4b0388fbf5a000005
-	//		step2: 51aa4be4b0388fbf5a000004
-	//		step3: 51aa4be4b0388fbf5a000003
-		
-
-	//jQuery.ajax({url:'/kronicles', type : 'DELETE', success : response });
-	//jQuery.ajax({url:'/kronicles/51b4f11830c80fab39000001/steps', type : 'DELETE', success : response });
-
-
-
-     jQuery.get( 'http://166.78.151.97:4711/kronicles', response);
-    // jQuery.get( 'http://166.78.151.97:4711/kronicles/ /steps', response);
-    // jQuery.get( '/kronicles/521213b5b9676d8860000002', response);
-    // jQuery.get( '/kronicles/521213b5b9676d8860000002', response);
-    // jQuery.get( '/kronicles/521213b5b9676d8860000002/items', response);
-		// jQuery.get( '/kronicles/steps', response);
-		// jQuery.get( '/kronicles/steps/51b4e1dd111d9b9f37000002', response);
-		// jQuery.get( '/kronicles/51b1ca94eb3fc80000000002/steps/51ab3445da51084c80000008', response);
-		
-	</script>
-
-	Hello From Node
-	
-</body>
-</html>
+}, response);
