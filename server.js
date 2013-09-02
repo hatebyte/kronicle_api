@@ -29,7 +29,6 @@ var Kronicle = new mongoose.Schema({
 StepModel = mongoose.model('Step', Step);
 KronicleModel = mongoose.model('Kronicle', Kronicle);
 
-
 var app = express();
 
 app.configure(function() {
