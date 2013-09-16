@@ -12,7 +12,7 @@ jQuery.post('http://166.78.151.97:4711/kronicles/', {
   "steps": [
     {
       "title": "Grind Coffee",
-      "description": "It is important that the coffee be ground coarse and that it be ground with a quality burr (rather than blade) grinder. By grinding the coffee coarse, you’re allowing for a slower and more even extraction, which results in a fuller bodied and more nuanced cup. Blade grinders chop the coffee rather than grinding it, resulting in uneven and unpredictable particle size. This leads to an uneven extraction, creating increased bitterness. In addition, the lack of consistency in particle size results in inconsistent and unpredictable results from pot to pot.",
+      "description": "It is important that the coffee be ground coarse and that it be ground with a quality burr (rather than blade) grinder. By grinding the coffee coarse, you’re allowing for a slower and more even extraction, which results in a fuller bodied and more nuanced cup.",
       "imageUrl": "coffee-img-part-1.png",
       "time": 120,
       "indexInKronicle": 0
@@ -33,7 +33,7 @@ jQuery.post('http://166.78.151.97:4711/kronicles/', {
     },
     {
       "title": "Add Water",
-      "description": "Pour it aggressively into the pot so that it saturates the grounds. The key is to saturate all the grounds evenly. You should move the stream around as you pour to facilitate this. Do not fill the pot entirely.\n\nWith many fresh coffees you will see significant expansion of the coffee in a sort of foam at the top of the liquid once you add water. This is known as bloom and is the result of the off-gassing of CO2 from the coffee. Adding too much water can result in a very messy countertop.",
+      "description": "Pour it aggressively into the pot so that it saturates the grounds. The key is to saturate all the grounds evenly. You should move the stream around as you pour to facilitate this. Do not fill the pot entirely.",
       "imageUrl": "coffee-img-part-4.png",
       "time": 60,
       "indexInKronicle": 3
@@ -54,7 +54,7 @@ jQuery.post('http://166.78.151.97:4711/kronicles/', {
     },
     {
       "title": "Pour the Coffee",
-      "description": "You need to do this as soon as you’ve pressed the pot. If you’re making more coffee than you can fit into a cup and want to hold some for later, pour the coffee into a thermal carafe. Do not simply leave the coffee in the Press Pot — it will get nasty quickly. If you want to avoid any stray grounds and sediment, you can pour the coffee through a mesh basket filter.",
+      "description": "You need to do this as soon as you’ve pressed the pot. If you’re making more coffee than you can fit into a cup and want to hold some for later, pour the coffee into a thermal carafe. Do not simply leave the coffee in the Press Pot — it will get nasty quickly.",
       "imageUrl": "coffee-img-part-7.png",
       "time": 60,
       "indexInKronicle": 6

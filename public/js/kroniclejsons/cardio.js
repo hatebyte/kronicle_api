@@ -43,7 +43,7 @@ jQuery.post('http://166.78.151.97:4711/kronicles/', {
     },
     {
       "title": "10 Crisscross Crunches",
-      "description": "Lie down on your back, knees bent at a 90 degree angle, and your hands behind your neck.  Keep your legs crossed at the knees. While raising your back from the ground, raise your left shoulder until your left elbow touches your right knee. Slowly lower yourself again until your elbow touches the ground. Then perform the same movement with the opposite side of your body.",
+      "description": "Lie down on your back, knees bent at a 90 degree angle, and your hands behind your neck.  Keep your legs crossed at the knees. While raising your back from the ground, raise your left shoulder until your left elbow touches your right knee. Slowly lower yourself again until your elbow touches the ground.",
       "imageUrl": "cardio-vid-part-6.mov",
       "time": 60,
       "indexInKronicle": 5
@@ -57,7 +57,7 @@ jQuery.post('http://166.78.151.97:4711/kronicles/', {
     },
     {
       "title": "10 Crisscross Crunches",
-      "description": "Lie down on your back, knees bent at a 90 degree angle, and your hands behind your neck.  Keep your legs crossed at the knees. While raising your back from the ground, raise your left shoulder until your left elbow touches your right knee. Slowly lower yourself again until your elbow touches the ground. Then perform the same movement with the opposite side of your body.",
+      "description": "Lie down on your back, knees bent at a 90 degree angle, and your hands behind your neck.  Keep your legs crossed at the knees. While raising your back from the ground, raise your left shoulder until your left elbow touches your right knee. Slowly lower yourself again until your elbow touches the ground.",
       "imageUrl": "cardio-vid-part-8.mov",
       "time": 60,
       "indexInKronicle": 7
